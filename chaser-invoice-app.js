@@ -4,7 +4,7 @@ if (Meteor.isClient) {
 
   Template.demo_invoices.helpers({
     invoices: function() {
-      return Invoices.find({}, {sort: {DueDate: 1}});
+      return Invoices.find({ Status: { $ne: 'PAID' } }, {sort: {DueDate: 1}});
     }
   });
 
@@ -16,7 +16,7 @@ if (Meteor.isClient) {
 
 
 if (Meteor.isServer) {
-  
+
   var Xero = Meteor.npmRequire('xero');
   var RSA_PRIVATE_KEY = Assets.getText('privatekey.pem');
   var CONSUMER_KEY = 'AY4VNMCAPQP1KDOVIROXGCSCZYHEEA';
