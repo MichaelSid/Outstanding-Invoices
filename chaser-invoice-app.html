@@ -1,0 +1,38 @@
+<head>
+  <title>chaser-invoice-app</title>
+</head>
+
+<body>
+	<div class="container">
+	  <h1>Michael's Xero Add-On</h1>
+
+	  {{> demo_invoices}}
+  </div>
+</body>
+
+<template name="demo_invoices">
+  <h2>List of Demo Company's Outstanding Invoices</h2>
+  <br>
+  <table>
+	  <tr style = 'font-weight: bolder'>
+	    <td>Invoice Number</td>
+	    <td>Company Name</td>
+	    <td>Currency</td>
+	    <td>Amount Due</td>
+	    <td>Due Date</td>
+	    <td>Status</td>
+	  </tr>
+	  {{#each invoices}}
+	  <tr>
+	    <td>{{InvoiceNumber}}</td>
+	    <td>{{Contact.Name}}</td>
+	    <td>{{CurrencyCode}}</td>
+	    <td>{{AmountDue}}</td>
+	    <td>{{formatDate DueDate}}</td>
+	    <td>{{Status}}</td>
+	  </tr>
+  {{/each}}
+	</table>
+</template>
+
+

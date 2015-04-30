@@ -1,0 +1,44 @@
+{
+  "dependencies": {
+    "xero": {
+      "version": "https://github.com/thallium205/xero/archive/9d1681eb50f9b3834afdcbf527f06863792a8981.tar.gz",
+      "dependencies": {
+        "oauth": {
+          "version": "0.9.12"
+        },
+        "easyxml": {
+          "version": "1.0.0",
+          "dependencies": {
+            "elementtree": {
+              "version": "0.1.6",
+              "dependencies": {
+                "sax": {
+                  "version": "0.3.5"
+                }
+              }
+            }
+          }
+        },
+        "xml2js": {
+          "version": "0.4.4",
+          "dependencies": {
+            "sax": {
+              "version": "0.6.1"
+            },
+            "xmlbuilder": {
+              "version": "2.6.2",
+              "dependencies": {
+                "lodash": {
+                  "version": "3.5.0"
+                }
+              }
+            }
+          }
+        },
+        "inflect": {
+          "version": "0.3.0"
+        }
+      }
+    }
+  }
+}
